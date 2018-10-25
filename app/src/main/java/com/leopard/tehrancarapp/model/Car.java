@@ -1,6 +1,8 @@
 package com.leopard.tehrancarapp.model;
 
-public class Car {
+import java.io.Serializable;
+
+public class Car implements Serializable {
     private String name;
     private String factory;
     private int year;
@@ -10,7 +12,7 @@ public class Car {
     private boolean automate;
     private int price;
 
-    private Car(String name, String factory, int year, int kilometer, String color, String description, boolean automate, int price) {
+    public Car(String name, String factory, int year, int kilometer, String color, String description, boolean automate, int price) {
         this.name = name;
         this.factory = factory;
         this.year = year;
@@ -53,58 +55,4 @@ public class Car {
         return price;
     }
 
-    public class CarBuilder {
-        private String name;
-        private String factory;
-        private int year;
-        private int kilometer;
-        private String color;
-        private String description;
-        private boolean automate;
-        private int price;
-
-        public CarBuilder setName(String name) {
-            this.name = name;
-            return this;
-        }
-
-        public CarBuilder setFactory(String factory) {
-            this.factory = factory;
-            return this;
-        }
-
-        public CarBuilder setYear(int year) {
-            this.year = year;
-            return this;
-        }
-
-        public CarBuilder setKilometer(int kilometer) {
-            this.kilometer = kilometer;
-            return this;
-        }
-
-        public CarBuilder setColor(String color) {
-            this.color = color;
-            return this;
-        }
-
-        public CarBuilder setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-
-        public CarBuilder setAutomate(boolean automate) {
-            this.automate = automate;
-            return this;
-        }
-
-        public CarBuilder setPrice(int price) {
-            this.price = price;
-            return this;
-        }
-
-        public Car createCar() {
-            return new Car(name, factory, year, kilometer, color, description, automate, price);
-        }
-    }
 }

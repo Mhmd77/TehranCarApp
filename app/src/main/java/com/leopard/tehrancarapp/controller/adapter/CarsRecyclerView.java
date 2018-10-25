@@ -1,7 +1,8 @@
-package com.leopard.tehrancarapp.adapter;
+package com.leopard.tehrancarapp.controller.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,10 +24,10 @@ public class CarsRecyclerView extends
 
     private Context context;
     private List<Car> list;
-    private View.OnClickListener onItemClickListener;
+    private OnItemClickListener onItemClickListener;
 
     public CarsRecyclerView(Context context, List<Car> list,
-                            View.OnClickListener onItemClickListener) {
+                            OnItemClickListener onItemClickListener) {
         this.context = context;
         this.list = list;
         this.onItemClickListener = onItemClickListener;
@@ -68,14 +69,21 @@ public class CarsRecyclerView extends
 
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         Car item = list.get(position);
+        if (item == null) {
+            Log.e("KIRI", "NULL e");
+        }
         holder.textviewCarName.setText(item.getName());
         holder.textviewCarFactory.setText(item.getFactory());
-        holder.textviewCarKilometer.setText(item.getKilometer());
-        holder.textviewCarPrice.setText(item.getPrice());
-        //Todo: Setup viewholder for item
-        holder.buttonCarDelete.setOnClickListener(onItemClickListener);
+        holder.textviewCarKilometer.setText(String.valueOf(item.getKilometer()));
+        holder.textviewCarPrice.setText(String.valueOf(item.getPrice()));
+        holder.buttonCarDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickListener.onItemClick(position);
+            }
+        });
     }
 
 
@@ -83,4 +91,9 @@ public class CarsRecyclerView extends
     public int getItemCount() {
         return list.size();
     }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
 }
