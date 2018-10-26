@@ -1,15 +1,25 @@
 package com.leopard.tehrancarapp.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Car implements Serializable {
+    @SerializedName("name")
     private String name;
+    @SerializedName("factory")
     private String factory;
+    @SerializedName("year")
     private int year;
+    @SerializedName("kilometer")
     private int kilometer;
+    @SerializedName("color")
     private String color;
+    @SerializedName("description")
     private String description;
+    @SerializedName("automate")
     private boolean automate;
+    @SerializedName("price")
     private int price;
 
     public Car(String name, String factory, int year, int kilometer, String color, String description, boolean automate, int price) {
