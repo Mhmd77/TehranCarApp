@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.activities.AddCarAdminActivity" />
-        <activity android:name=".view.activities.ListCarActivity"></activity>
+        <activity android:name=".view.activities.ListCarActivity" />
+        <activity android:name=".view.activities.WebViewActivity"></activity>
     </application>
 
 </manifest>

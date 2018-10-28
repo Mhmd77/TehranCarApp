@@ -104,4 +104,9 @@ public class SignInActivity extends AppCompatActivity {
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
         }
     }
+    @OnClick(R.id.button_signup)
+    public void onClick(){
+        startActivity(new Intent(SignInActivity.this,WebViewActivity.class));
+
+    }
 }
