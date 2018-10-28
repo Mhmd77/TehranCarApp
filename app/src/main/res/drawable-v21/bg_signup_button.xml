@@ -5,6 +5,9 @@
         <shape android:shape="rectangle">
             <solid android:color="@color/redColor" />
             <corners android:radius="50dp" />
+            <padding
+                android:top="8dp"
+                android:bottom="8dp" />
         </shape>
     </item>
 
@@ -15,6 +18,9 @@
                 android:endColor="#d0423e"
                 android:startColor="@color/redColor"
                 android:type="linear" />
+            <padding
+                android:top="8dp"
+                android:bottom="8dp" />
         </shape>
     </item>
 </ripple>
