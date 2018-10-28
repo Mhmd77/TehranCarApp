@@ -1,4 +1,4 @@
-package com.leopard.tehrancarapp.activities;
+package com.leopard.tehrancarapp.view.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

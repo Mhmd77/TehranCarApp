@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:checked="false"
+            android:icon="@drawable/ic_apps_white_24dp"
+            android:title="@string/mainpage"
+            android:fontFamily="@font/font_families"/>
+
+        <item
+            android:id="@+id/a1"
+            android:checked="false"
+            android:icon="@drawable/ic_settings_applications_white_24dp"
+            android:title="@string/setting"
+            android:fontFamily="@font/font_families"/>
+
+        <item
+            android:id="@+id/a2"
+            android:checked="false"
+            android:icon="@drawable/ic_exit_to_app_white_24dp"
+            android:title="@string/logout"
+            />
+
+
+    </group>
+</menu>
