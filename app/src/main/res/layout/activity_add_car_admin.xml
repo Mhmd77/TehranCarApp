@@ -20,7 +20,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/font_families"
+                android:fontFamily="@font/font_normal"
                 android:hint="name" />
 
             <EditText
@@ -28,7 +28,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/font_families"
+                android:fontFamily="@font/font_normal"
                 android:hint="factory" />
         </LinearLayout>
 
@@ -36,7 +36,7 @@
             android:id="@+id/editText_addCar_year"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/font_families"
+            android:fontFamily="@font/font_normal"
             android:inputType="number"
             android:hint="year" />
 
@@ -44,7 +44,7 @@
             android:id="@+id/editText_addCar_kilometer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/font_families"
+            android:fontFamily="@font/font_normal"
             android:inputType="number"
             android:hint="kilometer" />
 
@@ -52,21 +52,21 @@
             android:id="@+id/editText_addCar_color"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/font_families"
+            android:fontFamily="@font/font_normal"
             android:hint="color" />
 
         <CheckBox
             android:id="@+id/checkbox_addCar_automate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/font_families"
+            android:fontFamily="@font/font_normal"
             android:hint="is automate" />
 
         <EditText
             android:id="@+id/editText_addCar_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/font_families"
+            android:fontFamily="@font/font_normal"
             android:inputType="number"
             android:hint="price" />
 

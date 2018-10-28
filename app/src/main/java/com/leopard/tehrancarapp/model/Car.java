@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
 public class Car implements Serializable {
+    @SerializedName("id")
+    int id;
     @SerializedName("name")
     private String name;
     @SerializedName("factory")
@@ -21,8 +23,10 @@ public class Car implements Serializable {
     private boolean automate;
     @SerializedName("price")
     private int price;
+    private int user_id;
 
-    public Car(String name, String factory, int year, int kilometer, String color, String description, boolean automate, int price) {
+    public Car(int id, String name, String factory, int year, int kilometer, String color, String description, boolean automate, int price) {
+        this.id = id;
         this.name = name;
         this.factory = factory;
         this.year = year;
@@ -31,6 +35,7 @@ public class Car implements Serializable {
         this.description = description;
         this.automate = automate;
         this.price = price;
+        this.user_id = 1;
     }
 
     public String getName() {
@@ -65,4 +70,7 @@ public class Car implements Serializable {
         return price;
     }
 
+    public int getId() {
+        return id;
+    }
 }

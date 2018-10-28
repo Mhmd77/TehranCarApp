@@ -1,8 +1,6 @@
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -11,12 +9,13 @@
         <item name="android:editTextStyle">@style/LighterEditText</item>
     </style>
 
+
     <style name="MyTextView" parent="android:Widget.TextView">
-        <item name="android:fontFamily">@font/font_families</item>
+        <item name="android:fontFamily">@font/font_normal</item>
     </style>
 
     <style name="MyButton" parent="android:Widget.Button">
-        <item name="android:fontFamily">@font/font_families</item>
+        <item name="android:fontFamily">@font/font_normal</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
         <item name="android:paddingTop">8dp</item>
@@ -26,6 +25,6 @@
     </style>
 
     <style name="LighterEditText" parent="Widget.AppCompat.EditText">
-        <item name="android:fontFamily">@font/font_families</item>
+        <item name="android:fontFamily">@font/font_normal</item>
     </style>
 </resources>

@@ -11,18 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.activities.MainActivity" />
-        <activity android:name=".view.activities.SignUpActivity">
-
-        </activity>
-        <activity android:name=".view.activities.AddCarAdminActivity" />
-        <activity android:name=".view.activities.MenuActivity">
+        <activity android:name=".view.activities.ListCarsAdminActivity" />
+        <activity android:name=".view.activities.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.activities.AddCarAdminActivity" />
+        <activity android:name=".view.activities.ListCarActivity"></activity>
     </application>
 
 </manifest>

@@ -20,17 +20,24 @@ import butterknife.ButterKnife;
 public class CarsRecyclerView extends
         RecyclerView.Adapter<CarsRecyclerView.ViewHolder> {
 
-    private static final String TAG = CarsRecyclerView.class.getSimpleName();
 
     private Context context;
     private List<Car> list;
     private OnItemClickListener onItemClickListener;
+    private boolean isAdmin = true;
 
     public CarsRecyclerView(Context context, List<Car> list,
                             OnItemClickListener onItemClickListener) {
         this.context = context;
         this.list = list;
         this.onItemClickListener = onItemClickListener;
+    }
+
+    public CarsRecyclerView(Context context, List<Car> list) {
+        this.context = context;
+        this.list = list;
+        this.onItemClickListener = null;
+        isAdmin = false;
     }
 
 
@@ -71,19 +78,21 @@ public class CarsRecyclerView extends
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         Car item = list.get(position);
-        if (item == null) {
-            Log.e("KIRI", "NULL e");
-        }
         holder.textviewCarName.setText(item.getName());
         holder.textviewCarFactory.setText(item.getFactory());
         holder.textviewCarKilometer.setText(String.valueOf(item.getKilometer()));
         holder.textviewCarPrice.setText(String.valueOf(item.getPrice()));
-        holder.buttonCarDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onItemClickListener.onItemClick(position);
-            }
-        });
+        if (!isAdmin) {
+            holder.buttonCarDelete.setVisibility(View.GONE);
+        } else {
+            holder.buttonCarDelete.setVisibility(View.VISIBLE);
+            holder.buttonCarDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onItemClickListener.onItemClick(position);
+                }
+            });
+        }
     }
 
 

@@ -3,6 +3,7 @@ package com.leopard.tehrancarapp.controller;
 import com.leopard.tehrancarapp.model.Car;
 
 public class CarBuilder {
+    private int id;
     private String name;
     private String factory;
     private int year;
@@ -11,6 +12,11 @@ public class CarBuilder {
     private String description;
     private boolean automate;
     private int price;
+
+    public CarBuilder setId(int id) {
+        this.id = id;
+        return this;
+    }
 
     public CarBuilder setName(String name) {
         this.name = name;
@@ -53,6 +59,6 @@ public class CarBuilder {
     }
 
     public Car createCar() {
-        return new Car(name, factory, year, kilometer, color, description, automate, price);
+        return new Car(id, name, factory, year, kilometer, color, description, automate, price);
     }
 }
