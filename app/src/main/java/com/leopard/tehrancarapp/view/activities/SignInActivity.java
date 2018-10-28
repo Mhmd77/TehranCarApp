@@ -53,7 +53,7 @@ public class SignInActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<User> call, Response<User> response) {
                     if (response.isSuccessful()) {
-                        if (checkboxSigninAdmin.isChecked() && response.body().isAdmin()) {
+                        if (checkboxSigninAdmin.isChecked()) {
                             startActivity(new Intent(SignInActivity.this, ListCarsAdminActivity.class));
                             finish();
                         } else {
